@@ -315,7 +315,7 @@ void FirstSearchs::RecursiveBFS(unsigned origin_node, unsigned destiny, unsigned
   }
 
   // We get the next node from the front of the queue
-  unsigned siguiente_nodo = queue.front();
+  unsigned next_nodo = queue.front();
   queue.pop();
 
   // Creating the new level where the sucesors of our node will be located
@@ -379,7 +379,7 @@ void FirstSearchs::RecursiveBFS(unsigned origin_node, unsigned destiny, unsigned
   }
 
   // Recursive call
-  RecursiveBFS(origin_node, destiny, siguiente_nodo, queue, visited, sucesors, distance, 
+  RecursiveBFS(origin_node, destiny, next_nodo, queue, visited, sucesors, distance, 
     list, generated_nodes, inspected_nodes, found, iteration, levels, path, file);
 }
 
